@@ -1,7 +1,7 @@
 from typing import Any, Awaitable, Callable, Dict
 from aiogram import BaseMiddleware
 from aiogram.types import Message
-from ..db.user import add_user
+from db.user import add_user
 
 class UserCreatorMiddleware(BaseMiddleware):
     def __init__(self) -> None:

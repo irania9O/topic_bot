@@ -2,7 +2,8 @@ import asyncio
 import logging
 import sys
 from utils.settings import PROXY, BOT_TOKEN
-from aiogram import Bot, Dispatcher, html
+from middlewares.add_user import UserCreatorMiddleware
+from aiogram import Bot, Dispatcher, Router, html
 from aiogram.client.default import DefaultBotProperties
 from aiogram.client.session.aiohttp import AiohttpSession
 from aiogram.enums import ParseMode
@@ -11,6 +12,7 @@ from aiogram.types import Message
 
 
 registered_topics = {}
+
 
 dp = Dispatcher()
 
